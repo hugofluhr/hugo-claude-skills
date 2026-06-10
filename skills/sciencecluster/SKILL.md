@@ -22,7 +22,9 @@ hit a symptom that matches a reference title, read that file.
 
 | Thing | Value |
 |---|---|
-| SSH alias (typical) | `uzh.cluster` |
+| SSH alias | `uzh.cluster` |
+| SSH — interactive | `ssh uzh.cluster` |
+| SSH — inline commands | `ssh -o RemoteCommand=none uzh.cluster "..."` |
 | Login host | `cluster.s3it.uzh.ch` |
 | Partitions | `lowprio` (fast dispatch, **preemptable**), `standard` (fairshare) |
 | QoSes | `debug` (4 min, MaxJobsPU=1, +prio), `normal` (1 day, default), `medium` (2 day, `standard` only), `long` (7 day, MaxJobsPU=24) |
@@ -77,8 +79,8 @@ git add path/to/new_script.py path/to/new_job.sh
 git commit -m "Add ..."
 git push
 
-# cluster
-ssh sciencecluster 'cd ~/git/<project> && git stash && git pull && git stash pop'
+# cluster (`-o RemoteCommand=none` needed because uzh.cluster has RemoteCommand=/usr/bin/zsh)
+ssh -o RemoteCommand=none uzh.cluster 'cd ~/repos/<project> && git stash && git pull && git stash pop'
 ```
 
 **3. Inside the SLURM script — shell + conda setup:**

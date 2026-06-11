@@ -12,6 +12,14 @@ Skills are markdown files that inject focused domain knowledge into Claude Code.
 |---|---|---|
 | [`sciencecluster`](skills/sciencecluster/SKILL.md) | SLURM cluster (UZH sciencecluster) operational knowledge — job submission, conda in SLURM, GPU constraints, log conventions, and common failure modes | Adapted from [Gilles de Hollander](https://github.com/Gilles86/gilles-claude-skills/tree/main) |
 
+## Commands
+
+Slash commands for Claude Code. Symlink into `~/.claude/commands/` to make them available globally.
+
+| Command | Description |
+|---|---|
+| [`push`](commands/push.md) | Push the current branch to origin — handles SSH and HTTPS remotes correctly |
+
 ## Structure
 
 ```
@@ -19,4 +27,6 @@ skills/
   <skill-name>/
     SKILL.md          # Main skill file with frontmatter (name, description, triggers)
     references/       # Optional: supplementary reference files loaded on demand
+commands/
+  <command-name>.md   # Slash command instructions; symlink to ~/.claude/commands/
 ```

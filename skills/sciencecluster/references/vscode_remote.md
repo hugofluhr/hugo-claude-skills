@@ -44,8 +44,12 @@ Host uzh.cluster.node
 by the polling loop in the start script (see
 `references/ssh_multiplexing.md`).
 
-**Cluster side:** `~/slurm_jobs/vscode_tunnel.sbatch` — starts `sshd`
-on the allocated node, publishes its port via
+**Cluster side:** `vscode_tunnel.sbatch` lives in `~/slurm_scripts/vscode/`
+on the cluster — the `slurm_scripts` repo (`github.com/hugofluhr/slurm_scripts`),
+*not* a standalone unversioned file (that was the first pass — moved
+here after a review caught it). `cluster-vscode-start` does its own
+`git pull` there before every fresh submit, same convention as golden
+rule 2. Starts `sshd` on the allocated node, publishes its port via
 `scontrol update JobId=$SLURM_JOB_ID Comment=$PORT`, logs to
 `~/logs/vscode_tunnel_<jobid>.txt`. Default: `standard` partition, 4
 CPUs, 16G, `--time=4:00:00`, GPU line commented out.

@@ -208,3 +208,6 @@ reading.
 
 - `references/ssh_multiplexing.md` — `ControlMaster auto` to dodge
   the login-host connection rate limit
+- `references/vscode_remote.md` — VS Code Remote-SSH via a
+  compute-node tunnel job (`cluster-vscode-start`/`-stop`), Jupyter
+  kernel selection, gotchas

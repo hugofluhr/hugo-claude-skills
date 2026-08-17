@@ -54,19 +54,26 @@ don't create a numbered duplicate. A different topic on the same day is a new
 file; multiple sessions per day on different threads is expected and fine.
 
 If this repo already has earlier session notes, read one before writing to
-match its established shape — consistency across a repo's own notes matters
-more than any fixed template. Otherwise, use this default shape:
+match its established *structure* — section names and ordering. Do not match
+their length if they're long; keep new entries tight regardless of precedent.
+Otherwise, use this default shape:
 
 - Title + date, and a link to a companion note if this extends earlier work.
 - One line on how the session started vs. where it actually went, if it detoured.
-- **Findings** — numbered, each with the actual numbers and a pointer to where
-  the derivation now lives (which notebook, which cell/section, which script).
+- **Findings** — numbered. Each one: the actual number/claim, a pointer to
+  where the derivation now lives (which notebook, which cell/section, which
+  script), and the one-line consequence. Aim for 2–4 lines per finding, not a
+  paragraph. The session note is an index you search and skim, not a report
+  you read end to end — the full reasoning belongs in the notebook's markdown
+  cells, next to the code that backs it, not duplicated here. If a finding
+  genuinely needs more than that to state correctly, that's a sign it belongs
+  in the notebook and the session note should just point at it.
 - **Code shipped** — table of what changed, and its git state (merged/branch/uncommitted).
 - **Data produced**, if anything ran on a cluster/VM — what, where, and any
   verification performed.
 - **Git state at session end** — branch, whether local/remote agree.
-- **Open threads** — numbered, concrete, each one actionable by a future session
-  without needing this conversation's context to interpret it.
+- **Open threads** — numbered, concrete, one line each, each one actionable by
+  a future session without needing this conversation's context to interpret it.
 
 **3. Stage, don't commit.**
 

@@ -11,6 +11,8 @@ Skills are markdown files that inject focused domain knowledge into Claude Code.
 | Skill | Description | Source |
 |---|---|---|
 | [`sciencecluster`](skills/sciencecluster/SKILL.md) | SLURM cluster (UZH sciencecluster) operational knowledge — job submission, conda in SLURM, GPU constraints, log conventions, and common failure modes | Adapted from [Gilles de Hollander](https://github.com/Gilles86/gilles-claude-skills/tree/main) |
+| [`checkpoint`](skills/checkpoint/SKILL.md) | Fold session findings into rerunnable notebook/script code and a git-tracked `session-notes/` entry in the current repo, instead of letting derivations die in scratch/prose | Own design, 2026-08-17 |
+| [`vault-sync`](skills/vault-sync/SKILL.md) | Promote durable findings from a repo's `session-notes/` into Hugo's Obsidian vault (daily notes + per-project permanent notes), manual only | Own design, 2026-08-17 |
 
 ## Commands
 

@@ -52,6 +52,12 @@ Before writing anything, if you haven't already in this session:
   heading — creating, editing, or appending to any vault file all count.
 - No hallucinated content — a promoted entry must trace back to something
   actually stated in the source session note, not an inference or embellishment.
+- **Don't hard-wrap prose.** Obsidian renders a single newline as a real line
+  break (not joined into one paragraph the way GitHub-flavored Markdown does),
+  so writing prose pre-wrapped at ~80 columns produces a paragraph broken into
+  ragged short lines in reading view. Write each paragraph's body as one
+  unwrapped line; only break the line for an actual new paragraph, list item,
+  or heading.
 
 ## Procedure
 
